@@ -5,8 +5,6 @@ VisualStudioVersion = 17.12.35521.163 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestUseComAot", "TestUseComAot\TestUseComAot.csproj", "{662A628D-EBC8-43A1-AF27-EF3D05019135}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestUseComAot.Core", "TestUseComAot.Core\TestUseComAot.Core.csproj", "{7187C15C-7269-4A47-824F-3D75B0C950CE}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -19,10 +17,6 @@ Global
 		{662A628D-EBC8-43A1-AF27-EF3D05019135}.Release|x64.ActiveCfg = Release|x64
 		{662A628D-EBC8-43A1-AF27-EF3D05019135}.Release|x64.Build.0 = Release|x64
 		{662A628D-EBC8-43A1-AF27-EF3D05019135}.Release|x64.Deploy.0 = Release|x64
-		{7187C15C-7269-4A47-824F-3D75B0C950CE}.Debug|x64.ActiveCfg = Debug|x64
-		{7187C15C-7269-4A47-824F-3D75B0C950CE}.Debug|x64.Build.0 = Debug|x64
-		{7187C15C-7269-4A47-824F-3D75B0C950CE}.Release|x64.ActiveCfg = Release|x64
-		{7187C15C-7269-4A47-824F-3D75B0C950CE}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

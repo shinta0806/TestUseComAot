@@ -64,10 +64,18 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\TestUseComAot.Core\TestUseComAot.Core.csproj" />
+	  <Using Include="WinUIEx" />
 	</ItemGroup>
 
 	<PropertyGroup Condition="'$(DisableHasPackageAndPublishMenuAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
 		<HasPackageAndPublishMenu>true</HasPackageAndPublishMenu>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+	  <NoWarn>IDE0007;IDE0049</NoWarn>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+	  <NoWarn>IDE0007;IDE0049</NoWarn>
 	</PropertyGroup>
 </Project>
