@@ -67,6 +67,10 @@
 	  <Using Include="WinUIEx" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="Views\MainWindows\" />
+	</ItemGroup>
+
 	<PropertyGroup Condition="'$(DisableHasPackageAndPublishMenuAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
 		<HasPackageAndPublishMenu>true</HasPackageAndPublishMenu>
 	</PropertyGroup>

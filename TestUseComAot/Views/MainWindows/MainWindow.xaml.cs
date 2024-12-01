@@ -1,6 +1,6 @@
 using TestUseComAot.Views;
 
-namespace TestUseComAot;
+namespace TestUseComAot.Views.MainWindows;
 
 public sealed partial class MainWindow : WindowEx
 {
