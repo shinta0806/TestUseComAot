@@ -1,0 +1,10 @@
+﻿{
+    "profiles": {
+      "TestUseComAot (Package)": {
+        "commandName": "MsixPackage"
+      },
+      "TestUseComAot (Unpackaged)": {
+        "commandName": "Project"
+      }
+    }
+}
