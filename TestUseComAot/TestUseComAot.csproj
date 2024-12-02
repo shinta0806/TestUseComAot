@@ -71,6 +71,10 @@
 	  <Folder Include="Views\MainWindows\" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\TestUseComAot.CsWin32\TestUseComAot.CsWin32.csproj" />
+	</ItemGroup>
+
 	<PropertyGroup Condition="'$(DisableHasPackageAndPublishMenuAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
 		<HasPackageAndPublishMenu>true</HasPackageAndPublishMenu>
 	</PropertyGroup>

@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35521.163 d17.12
+VisualStudioVersion = 17.12.35521.163
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestUseComAot", "TestUseComAot\TestUseComAot.csproj", "{662A628D-EBC8-43A1-AF27-EF3D05019135}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestUseComAot.CsWin32", "TestUseComAot.CsWin32\TestUseComAot.CsWin32.csproj", "{43FDDC07-8A19-484C-98B3-8860AB926EE2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,6 +19,9 @@ Global
 		{662A628D-EBC8-43A1-AF27-EF3D05019135}.Release|x64.ActiveCfg = Release|x64
 		{662A628D-EBC8-43A1-AF27-EF3D05019135}.Release|x64.Build.0 = Release|x64
 		{662A628D-EBC8-43A1-AF27-EF3D05019135}.Release|x64.Deploy.0 = Release|x64
+		{43FDDC07-8A19-484C-98B3-8860AB926EE2}.Debug|x64.ActiveCfg = Debug|x64
+		{43FDDC07-8A19-484C-98B3-8860AB926EE2}.Debug|x64.Build.0 = Debug|x64
+		{43FDDC07-8A19-484C-98B3-8860AB926EE2}.Release|x64.ActiveCfg = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
