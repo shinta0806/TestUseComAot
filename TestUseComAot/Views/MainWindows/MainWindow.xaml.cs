@@ -1,5 +1,3 @@
-using TestUseComAot.Views;
-
 namespace TestUseComAot.Views.MainWindows;
 
 public sealed partial class MainWindow : WindowEx
@@ -10,6 +8,6 @@ public sealed partial class MainWindow : WindowEx
 
 		AppWindow.SetIcon(Path.Combine(AppContext.BaseDirectory, "Assets/WindowIcon.ico"));
 		Content = new MainPage();
-		Title = "AppDisplayName";
+		Title = "AOT で COM を使うテスト";
 	}
 }

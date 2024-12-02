@@ -7,20 +7,20 @@
     Background="{ThemeResource SolidBackgroundFillColorBaseBrush}"
     mc:Ignorable="d">
 
-    <Grid x:Name="ContentArea">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="48" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
+	<StackPanel Margin="20" >
 
-        <TextBlock
-            Grid.Row="0"
-            x:Uid="Main_Title"
-            Style="{StaticResource PageTitleStyle}" />
+		<StackPanel Orientation="Horizontal" >
+			<TextBlock Text="漢字：" VerticalAlignment="Center" />
+			<TextBox Text="{x:Bind ViewModel.Kanji, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="300" />
+		</StackPanel>
 
-        <Grid Grid.Row="1">
-            
-        </Grid>
-        
-    </Grid>
+		<Button Content="↓逆変換" Margin="0,20,0,0" Command="{x:Bind ViewModel.ButtonConvertClickedCommand}" />
+
+		<StackPanel Orientation="Horizontal" Margin="0,20,0,0" >
+			<TextBlock Text="ひらがな：" VerticalAlignment="Center" />
+			<TextBlock Text="{x:Bind ViewModel.Hiragana, Mode=OneWay}" />
+		</StackPanel>
+
+	</StackPanel>
+
 </Page>

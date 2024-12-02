@@ -45,6 +45,7 @@
 		<GenerateTestArtifacts>True</GenerateTestArtifacts>
 		<AppxBundle>Never</AppxBundle>
 		<AppInstallerUri>http://example.com</AppInstallerUri>
+		<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
 	</PropertyGroup>
 
 	<ItemGroup>
