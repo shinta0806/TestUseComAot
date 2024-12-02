@@ -59,17 +59,17 @@ public partial class MainPageViewModel : ObservableRecipient
 				}
 
 				ComWrappers comWrappers = new StrategyBasedComWrappers();
-				IFELanguage2 lang = (IFELanguage2)comWrappers.GetOrCreateObjectForComInstance((nint)ppv, CreateObjectFlags.None);
+				IFELanguage2 ime = (IFELanguage2)comWrappers.GetOrCreateObjectForComInstance((nint)ppv, CreateObjectFlags.None);
 
 				// IME 初期化
-				result = (HRESULT)lang.Open();
+				result = (HRESULT)ime.Open();
 				if (result.Failed)
 				{
 					throw new Exception("IME の初期化に失敗：" + result);
 				}
 
 				// 逆変換
-				result = (HRESULT)lang.GetPhonetic(Kanji, 1, -1, out String hiragana);
+				result = (HRESULT)ime.GetPhonetic(Kanji, 1, -1, out String hiragana);
 				if (result.Failed)
 				{
 					throw new Exception("逆変換に失敗：" + result);
@@ -77,7 +77,7 @@ public partial class MainPageViewModel : ObservableRecipient
 				Hiragana = hiragana;
 
 				// IME 後始末
-				result = (HRESULT)lang.Close();
+				result = (HRESULT)ime.Close();
 				if (result.Failed)
 				{
 					throw new Exception("IME の後始末に失敗：" + result);
