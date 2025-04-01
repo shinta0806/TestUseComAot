@@ -92,6 +92,7 @@ public partial class MainPageViewModel : ObservableRecipient
 					Guid clsId = new("6a91029e-aa49-471b-aee7-7d332785660d");
 
 					// COM オブジェクト作成
+					// ポインタ取得後 IFELanguage ime2 = *ime; のようなコードはビルドできるが正常に動作しない
 					HRESULT result = PInvoke.CoCreateInstance(clsId, null, CLSCTX.CLSCTX_INPROC_SERVER | CLSCTX.CLSCTX_INPROC_HANDLER | CLSCTX.CLSCTX_LOCAL_SERVER,
 						out ime);
 					if (result.Failed)
