@@ -1,3 +1,4 @@
 // モジュール
 Ole32.*
 
+IFELanguage
