@@ -79,8 +79,6 @@ public partial class MainPageViewModel : ObservableRecipient
 			unsafe
 			{
 				IFELanguage* ime = null;
-				BSTR kanjiBStr = new();
-				BSTR hiraganaBStr = new();
 				try
 				{
 					if (String.IsNullOrEmpty(Kanji))
@@ -108,10 +106,11 @@ public partial class MainPageViewModel : ObservableRecipient
 					}
 
 					// 逆変換
-					// "useSafeHandles": true の時は SysFreeStringSafeHandle を使うのかもしれない
 					// BSTR を Char* コンストラクターで作ると文字列の長さが半分になってしまうので StringToBSTR() で作る
-					kanjiBStr = (BSTR)Marshal.StringToBSTR(Kanji);
-					result = ime->GetPhonetic(kanjiBStr, 1, -1, ref hiraganaBStr);
+					using SysFreeStringSafeHandle kanjiBStrHandle = new(Marshal.StringToBSTR(Kanji));
+					BSTR hiraganaBStr = new();
+					result = ime->GetPhonetic(kanjiBStrHandle, 1, -1, ref hiraganaBStr);
+					using SysFreeStringSafeHandle hiraganaBStrHandle = new(hiraganaBStr);
 					if (result.Failed)
 					{
 						throw new Exception("逆変換に失敗：" + result);
@@ -127,8 +126,6 @@ public partial class MainPageViewModel : ObservableRecipient
 				}
 				finally
 				{
-					Marshal.FreeBSTR(hiraganaBStr);
-					Marshal.FreeBSTR(kanjiBStr);
 					if (ime != null)
 					{
 						// COM 解放

@@ -5,5 +5,5 @@
 	"comInterop": {
 		"preserveSigMethods": [ "*" ]
 	},
-	"useSafeHandles": false
+	"useSafeHandles": true
 }
